@@ -6,4 +6,6 @@ public interface Constants {
 
     String USER_ENDPOINT = APP_ROOT + "/user";
 
+    String FILE_ENDPOINT = APP_ROOT + "/file";
+
 }

@@ -30,7 +30,6 @@ public class JwtProvider {
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-
     public String extractUsername(String token) {
         return extractData(token).getSubject();
     }

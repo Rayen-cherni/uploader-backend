@@ -14,6 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import static utils.Constants.FILE_ENDPOINT;
 import static utils.Constants.USER_ENDPOINT;
 
 @Configuration
@@ -42,6 +43,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(
                         "/**/" + USER_ENDPOINT + "/login" + "/**",
                         "/**/" + USER_ENDPOINT + "/register" + "/**",
+                        "/**/" + FILE_ENDPOINT + "/upload" + "/**",
+                        "/**/" + FILE_ENDPOINT + "/download" + "/**",
                         "/v2/api-docs",
                         "/swagger-resources",
                         "/swagger-resources/**",
@@ -59,7 +62,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(authenticationJwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
 
-
+    // to be able to use authenticationManager on login controller
     @Bean
     public AuthenticationManager customAuthenticationManager() throws Exception {
         return authenticationManagerBean();
