@@ -28,7 +28,7 @@ import static utils.Constants.FILE_ENDPOINT;
 @RestController
 @RequestMapping(value = FILE_ENDPOINT)
 @Api(FILE_ENDPOINT)
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class FileController {
 
     /**Steps : **/

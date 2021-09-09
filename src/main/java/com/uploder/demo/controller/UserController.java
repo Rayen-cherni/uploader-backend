@@ -20,7 +20,7 @@ import static utils.Constants.USER_ENDPOINT;
 @RestController
 @RequestMapping(USER_ENDPOINT)
 @Api(USER_ENDPOINT)
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class UserController {
 
     private final IUserService userService;
