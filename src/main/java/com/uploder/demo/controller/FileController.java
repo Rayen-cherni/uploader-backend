@@ -34,9 +34,11 @@ public class FileController {
     /**Steps : **/
     // Step I: Define a loction for our files
     /**
-     * System.getProperty to specefic the directory which the user necessarily upload files from him
+     * System.getProperty to specefic the directory which the user necessarily download and storage files in it.
      **/
-    public static final String DIRECTORY = System.getProperty("user.home") + "/Downloads/uploads/";
+    //public static final String DIRECTORY = System.getProperty("user.home") + "/Downloads/uploads/";
+    public static final String DIRECTORY = System.getProperty("user.home") + "/Desktop/Spring/uploader/uploads/";
+
     // Step II: Define a method to upload files
 
     /**
